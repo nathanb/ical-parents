@@ -25,7 +25,7 @@ Open your Settings -> Accounts & Passwords, and Click on Subscribed Calendars
 
 <img width="320" src="/assets/ios-remove-2.png" alt="Subscribed calendars list"/>
 
-Click the calendar you want to remove. In this case, "2018 (Fall) Kickers - 3rd Grade Girls". From here you can see details of the calendar. Scroll to the bottom of the screen and find the Delete Account button. (This just deletes the calendar subscription, but you will receive confirmation whether you want to do it or not. Don't be afraid. You can always re-subscribe if you do it my mistake.
+Click the calendar you want to remove. In this example, "2018 (Fall) Kickers - 3rd Grade Girls". From here you can see details of the calendar. Scroll to the bottom of the screen and find the Delete Account button. (This just deletes the calendar subscription, but you will receive confirmation whether you want to do it or not). Don't be afraid. You can always re-subscribe if you do it my mistake.
 
 <img width="320" src="/assets/ios-remove-3.png" alt="Calendar details."/>
 
