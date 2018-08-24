@@ -1,6 +1,6 @@
 ## Subscribe to the calendar
 
-The basic concept is simple. Click the link below and subscribe.
+The basic concept is simple. Click the link below and subscribe. The calendar will automatically update as we make changes (like game cancellations or snack schedule updates).
 
 For more detail, here's a quick walkthrough with some examples shown on iPhone/iPad. But this also works on Android, Mac, Outlook, Chrome, etc. Using the device you want to view the calendar events, click this link below.
 
@@ -13,7 +13,7 @@ You'll see this prompt below. Click Subscribe. From here you can go directly to 
 
 <img width="320" src="/assets/ios-subscribe-2.png" alt="View events or done"/>
 
-You should now see events in your calendar for our practices. These events will automatically update as we make changes (like game cancellations or snack schedule updates). (Note: You will not receive notifications when this calendar changes though).
+You should now see events in your calendar for our practices and games. (Note: You will not receive notifications when this calendar changes).
 
 ## Remove the calendar (post-season)
 
