@@ -17,6 +17,8 @@ You should now see events in your calendar for our practices and games. (Note: Y
 
 <img width="320" src="/assets/cal-sample.png" alt="View events or done"/>
 
+---
+
 ## Remove the calendar (post-season)
 
 Open your Settings -> Accounts & Passwords, and Click on Subscribed Calendars
