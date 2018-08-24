@@ -15,7 +15,6 @@ You'll see this prompt below. Click Subscribe. From here you can go directly to 
 
 You should now see events in your calendar for our practices and games. (Note: You will not receive notifications when this calendar changes).
 
----
 
 ## Remove the calendar (post-season)
 
