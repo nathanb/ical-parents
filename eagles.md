@@ -4,7 +4,7 @@ The basic concept is simple. Click the link below and subscribe. The calendar wi
 
 For more detail, here's a quick walkthrough with some examples shown on iPhone/iPad. But this also works on Android, Mac, Outlook, Chrome, etc. Using the device you want to view the calendar events, click this link below.
 
-<a href="webcal://p51-calendars.icloud.com/published/2/GZci66ejWn6QOZvoiaBEHWEkt5IgDaazrHYXi045aKbJUgXaD8oVrwXbXQ3Kxo9hBfiF9L7656mekG6UCCEFSt-8_obzyNelEbQrh8rX18M">Subscribe to the Eagle's 1st/2nd Grade soccer schedule</a>
+### <a href="webcal://p51-calendars.icloud.com/published/2/GZci66ejWn6QOZvoiaBEHWEkt5IgDaazrHYXi045aKbJUgXaD8oVrwXbXQ3Kxo9hBfiF9L7656mekG6UCCEFSt-8_obzyNelEbQrh8rX18M">Subscribe to the Eagle's 1st/2nd Grade soccer schedule</a>
 
 ### From an iPhone or iPad
 You'll see this prompt below. Click Subscribe. From here you can go directly to your calendar or click "Done" to close it.
