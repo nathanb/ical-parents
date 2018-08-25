@@ -1,10 +1,10 @@
 ## Subscribe to the calendar
 
-The basic concept is simple. Click the link below and subscribe. The calendar will automatically update as we make changes (like game cancellations or snack schedule updates).
+**TL;DR** Click the link below and subscribe. The calendar will automatically update as we make changes (like game cancellations or snack schedule updates).
 
 For more detail, here's a quick walkthrough with some examples shown on iPhone/iPad. But this also works on Android, Mac, Outlook, Chrome, etc. Using the device you want to view the calendar events, click this link below.
 
-### <a href="webcal://p51-calendars.icloud.com/published/2/exjEpAXDqPueLyEduUW_QJgYa13LfEmXwgX5NlTdjZoz9mD5qPch2nHo_SOOgRIrFM9LLZdVPFIM1X-WoPTzi9a8Dbt5cazFNAtEn3uynAw">Subscribe to the Kicker's 3rd grade soccer schedule</a>
+### <a href="webcal://p51-calendars.icloud.com/published/2/exjEpAXDqPueLyEduUW_QJgYa13LfEmXwgX5NlTdjZoz9mD5qPch2nHo_SOOgRIrFM9LLZdVPFIM1X-WoPTzi9a8Dbt5cazFNAtEn3uynAw">Click to subscribe to the Kicker's 3rd grade soccer schedule</a>
 
 ### From an iPhone or iPad
 You'll see this prompt below. Click Subscribe. From here you can go directly to your calendar or click "Done" to close it.
