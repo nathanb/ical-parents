@@ -1,1 +1,0 @@
-### <a href="webcal://p51-calendars.icloud.com/published/2/GZci66ejWn6QOZvoiaBEHWEkt5IgDaazrHYXi045aKbJUgXaD8oVrwXbXQ3Kxo9hBfiF9L7656mekG6UCCEFSt-8_obzyNelEbQrh8rX18M">Click to subscribe to the Eagle's 1st/2nd Grade soccer schedule</a>
