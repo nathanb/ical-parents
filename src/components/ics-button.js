@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 const AndroidButton = ({calendarUrl}) => (
-  <a href={`https:${calendarUrl}`} className="btn btn-block btn-lg btn-dark">Calendar ICS<br/>(Android, Outlook, etc)</a>
+  <a href={`https:${calendarUrl}`} className="btn btn-block btn-lg btn-dark">Calendar ICS<br/>(Outlook, iCalendar, etc)</a>
 )
 
 AndroidButton.propTypes = {
