@@ -32,6 +32,7 @@ class GoogleButton extends React.Component {
   }
   addClicked(e) {
     // this.props.calendarUrl
+    this.reset()
     this.state.showGoogle = true
     this.setState({...this.state})
 
