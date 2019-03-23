@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{{ site.title | default: site.github.repository_name }}</title>
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/solid.css" integrity="sha384-QokYePQSOwpBDuhlHOsX0ymF6R/vLk/UQVz3WHa6wygxI5oGTmDTv8wahFOSspdm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/brands.css" integrity="sha384-n9+6/aSqa9lBidZMRCQHTHKJscPq6NW4pCQBiMmHdUCvPN8ZOg2zJJTkC7WIezWv" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/fontawesome.css" integrity="sha384-vd1e11sR28tEK9YANUtpIOdjGW14pS87bUBuOIoBILVWLFnS+MCX9T6MMf0VdPGq" crossorigin="anonymous">
@@ -114,9 +115,13 @@
       <header class="masthead mb-auto"></header>
 
       <main role="main" class="inner cover">
-        <h1 class="cover-heading">{{ site.title | default: site.github.repository_name }}</h1>
-        <p class="lead">{{ site.description | default: site.github.project_tagline }}</p>
-        {{ content }}
+        <h1 class="cover-heading">Test Page</h1>
+        <p class="lead">Testing placeholder...</p>
+        <script type="text/javascript">
+          window.calendarUrl = "//p51-calendars.icloud.com/published/2/NDMzNTIyNTA0NDMzNTIyNetDyC60oxKGdMxQv9pwlBFttfJJDo-76Y05WHlrdr-uaKoPrHQ1vqfu4R4Yff8T4LMCouWeoJVQ5RtUfJy695o";
+        </script>
+
+        <div id="app_ctr"></div>
       </main>
 
       <footer class="mastfoot mt-auto"></footer>
@@ -125,17 +130,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script async type="text/javascript" src="/dist/index.bundle.js"></script>
-    {% if site.google_analytics %}
+    <!-- {% if site.google_analytics %} -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-7538773-3"></script>
-    <script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-7538773-3"></script> -->
+    <!-- <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
       gtag('config', 'UA-7538773-3');
-    </script>
+    </script> -->
 
-    {% endif %}
-  </body>
+    <!-- {% endif %} -->
+    </body>
 </html>
