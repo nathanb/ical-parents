@@ -94,6 +94,11 @@ class GoogleButton extends React.Component {
             <p>
               <img src="/images/google-screen.png" className="img-fluid img-help" />
             </p>
+            <div className="card bg-light mb-3">
+              <div className="card-body">
+                <h5 className="card-text"><i className="fas fa-exclamation-triangle text-warning"/>&nbsp;Come back after adding the calendar for one more step.</h5>
+              </div>
+            </div>
             <p><a target="_blank" href="https://calendar.google.com/calendar/r/settings/addbyurl" onClick={this.openGoogleClicked} className="btn btn-primary">Continue on Google</a></p>
           </div>
           <div className={`google-step-3 ${this.state.googleStep !== 3 ? "collapse" : ""}`}>
