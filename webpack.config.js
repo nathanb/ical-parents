@@ -38,6 +38,7 @@ const buildConfig = (options = {}) => {
             options: {
               presets: [['@babel/preset-env', {
                 "useBuiltIns": "entry"
+                ,"corejs": 3
               }], '@babel/preset-react'] //enables ES2015 and react/JSX
               ,plugins: [
                 '@babel/plugin-proposal-object-rest-spread'
@@ -51,7 +52,7 @@ const buildConfig = (options = {}) => {
     }
   }
 
-  config.entry["@babel/polyfill", name] = `${path.join(APP_DIR, name)}.js`
+  config.entry["core-js/stable", "regenerator-runtime/runtime", name] = `${path.join(APP_DIR, name)}.js`
 
   return config
 }

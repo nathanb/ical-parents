@@ -18,7 +18,7 @@ app.use((err, req, res) => {
 })
 
   //HTTP server
-const port = 8000
+const port = 3000
 var serverHttp = http.createServer(app)
 serverHttp.on('error', function(err) {
   console.dir(err, {colors: true, depth: 10})

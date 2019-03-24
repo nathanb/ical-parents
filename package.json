@@ -17,6 +17,7 @@
     "url": "https://github.com/nathanb/ical-parents/issues"
   },
   "homepage": "https://github.com/nathanb/ical-parents#readme",
+  "browserslist": "> 0.25%, not dead",
   "peerDependencies": {
     "prop-types": "^15.7.2",
     "react": "^16.8.2",
@@ -37,7 +38,9 @@
     "babel-loader": "^8.0.2",
     "babel-plugin-dev-expression": "^0.2.1",
     "body-parser": "^1.18.3",
+    "browserslist": "^4.5.2",
     "copy-to-clipboard": "^3.0.8",
+    "core-js": "^3.0.0",
     "eslint": "^5.9.0",
     "eslint-config-recommended": "^4.0.0",
     "eslint-plugin-react": "^7.11.1",
@@ -47,10 +50,12 @@
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "react-test-renderer": "^16.8.3",
+    "regenerator-runtime": "^0.13.2",
     "should": "^13.2.3",
     "sinon": "^7.2.4",
     "webpack": "^4.29.5",
     "webpack-bundle-analyzer": "^3.0.4",
     "webpack-cli": "^3.2.3"
-  }
+  },
+  "dependencies": {}
 }

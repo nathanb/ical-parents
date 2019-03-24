@@ -16,6 +16,9 @@ class GoogleButton extends React.Component {
     this.onGoogleModalClose = this.onGoogleModalClose.bind(this)
     this.addClicked = this.addClicked.bind(this)
     this.copyTextClicked = this.copyTextClicked.bind(this)
+    this.openGoogleClicked = this.openGoogleClicked.bind(this)
+    this.iPhoneInstructionsClicked = this.iPhoneInstructionsClicked.bind(this)
+    this.androidInstructionsClicked = this.androidInstructionsClicked.bind(this)
   }
   componentDidMount() {
     this.reset()
@@ -54,6 +57,19 @@ class GoogleButton extends React.Component {
 
     //change icon state to show it was copied.
   }
+  openGoogleClicked(e) {
+    //don't prevent propogate...
+    this.state.googleStep = 3
+    this.setState({...this.state})
+  }
+  iPhoneInstructionsClicked(e) {
+    this.state.googleStep = 4
+    this.setState({...this.state})
+  }
+  androidInstructionsClicked(e) {
+    this.state.googleStep = 5
+    this.setState({...this.state})
+  }
   render() {
     return [
       (<a key="1" href="javascript:void(0)" className="btn btn-block btn-lg btn-primary" onClick={this.addClicked}><i className="fab fa-google"></i>&nbsp;Google Calendar</a>)
@@ -73,12 +89,39 @@ class GoogleButton extends React.Component {
           <div className={`google-step-2 ${this.state.googleStep !== 2 ? "collapse" : ""}`}>
             <h3>Step 2 - Add Calendar by URL on Google</h3>
             <p>
-              You will need to <em>Paste</em> into the <code>URL of calendar</code> field and click <code>Add calendar</code>. That's it!
+              You will need to <em>Paste</em> into the <code>URL of calendar</code> field and click <code>Add calendar</code>.
             </p>
             <p>
-              <img src="/images/google-screen.png" className="img-fluid" style={{border: "dashed silver 4px"}}/>
+              <img src="/images/google-screen.png" className="img-fluid img-help" />
             </p>
-            <a href="https://calendar.google.com/calendar/r/settings/addbyurl" className="btn btn-primary">Continue on Google</a>
+            <p><a target="_blank" href="https://calendar.google.com/calendar/r/settings/addbyurl" onClick={this.openGoogleClicked} className="btn btn-primary">Continue on Google</a></p>
+          </div>
+          <div className={`google-step-3 ${this.state.googleStep !== 3 ? "collapse" : ""}`}>
+            <h3>Step 3 - Show the calendar in your Google Calendar app</h3>
+            <p>Now that Google Calendar has subscribed to the calendar, you can view it in your Calendar app by toggling its visibiltiy. This is slightly different between iPhone and Android, so choose your phone to see instructions.</p>
+            <p><button type="button" className="btn btn-secondary" onClick={this.iPhoneInstructionsClicked}><i className="fab fa-apple"/>&nbsp;iPhone</button>&nbsp;<button type="button" className="btn btn-success" onClick={this.androidInstructionsClicked}><i className="fab fa-android"/>&nbsp;Android</button></p>
+          </div>
+          <div className={`google-step-4 ${this.state.googleStep !== 4 ? "collapse" : ""}`}>
+            <h3><i className="fab fa-apple"/>&nbsp;iPhone - Show the calendar</h3>
+            <hr/>
+            <p>Open the calendar app menu.</p>
+            <p><img src="/images/google-open-menu.jpeg" className="img-fluid img-help"  /></p>
+            <hr/>
+            <p>Scroll to the bottom and check the new calendar.</p>
+            <p><img src="/images/google-show-calendar.png" className="img-fluid img-help" /></p>
+          </div>
+          <div className={`google-step-5 ${this.state.googleStep !== 5 ? "collapse" : ""}`}>
+            <h3><i className="fab fa-android text-success"/> Android - Show the calendar</h3>
+            <hr/>
+            <p>Open the calendar app menu and the Settings menu (bottom).</p>
+            <p><img src="/images/android-open-settings.png" className="img-fluid img-help" /></p>
+            <hr/>
+            <p>Scroll down and you'll see calendars. You may need to click <code>Show more.</code> to see the new ones.</p>
+            <p><img src="/images/android-reveal.png" className="img-fluid img-help" /></p>
+            <p><img src="/images/android-cal-settings.png" className="img-fluid img-help" /></p>
+            <p>View the settings for the Kickers - Spring 2019 calendar and enable <code>sync</code>.</p>
+            <p><img src="/images/android-sync.png" className="img-fluid img-help" /></p>
+            <p>All done! You should see Kickers' events in your calendar app!</p>
           </div>
         </Modal>)
     ]
