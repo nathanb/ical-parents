@@ -19,6 +19,7 @@ class GoogleButton extends React.Component {
     this.openGoogleClicked = this.openGoogleClicked.bind(this)
     this.iPhoneInstructionsClicked = this.iPhoneInstructionsClicked.bind(this)
     this.androidInstructionsClicked = this.androidInstructionsClicked.bind(this)
+    this.skipToGoogleInstructions = this.skipToGoogleInstructions.bind(this)
   }
   componentDidMount() {
     this.reset()
@@ -56,6 +57,10 @@ class GoogleButton extends React.Component {
     }, 500)
 
     //change icon state to show it was copied.
+  }
+  skipToGoogleInstructions(e) {
+    this.state.googleStep = 3
+    this.setState({...this.state})
   }
   openGoogleClicked(e) {
     //don't prevent propogate...
@@ -99,7 +104,10 @@ class GoogleButton extends React.Component {
                 <h5 className="card-text"><i className="fas fa-exclamation-triangle text-warning"/>&nbsp;Come back after adding the calendar for one more step.</h5>
               </div>
             </div>
-            <p><a target="_blank" href="https://calendar.google.com/calendar/r/settings/addbyurl" onClick={this.openGoogleClicked} className="btn btn-primary">Continue on Google</a></p>
+            <p>
+              <a target="_blank" href="https://calendar.google.com/calendar/r/settings/addbyurl" onClick={this.openGoogleClicked} className="btn btn-primary">Continue on Google</a>
+              &nbsp;<button type="button" className="btn btn-secondary" onClick={this.skipToGoogleInstructions}>Skip to next step</button>
+            </p>
           </div>
           <div className={`google-step-3 ${this.state.googleStep !== 3 ? "collapse" : ""}`}>
             <h3>Step 3 - Show the calendar in your Google Calendar app</h3>
