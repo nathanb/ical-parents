@@ -23,10 +23,10 @@ const buildConfig = (options = {}) => {
         resourceRegExp: /^\.\/locale$/,
         contextRegExp: /moment$/
       })
-      // ,new BundleAnalyzerPlugin({
-      //   analyzerMode: "static"
-      //   ,openAnalyzer: true
-      // })
+      ,new BundleAnalyzerPlugin({
+        analyzerMode: "static"
+        ,openAnalyzer: true
+      })
     ]
     ,module: {
       rules: [
