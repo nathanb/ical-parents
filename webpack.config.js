@@ -2,6 +2,8 @@ const path                    = require('path')
 const _                       = require("lodash")
 const webpack                 = require("webpack")
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin")
+const TerserPlugin            = require("terser-webpack-plugin")
 
 var BUILD_DIR = path.resolve(__dirname, 'dist/')
 var APP_DIR = path.resolve(__dirname, 'src/')
@@ -10,14 +12,25 @@ var APP_DIR = path.resolve(__dirname, 'src/')
 //This is an example of a single entry script build for a react/single-page app. Hence "main"
 //For a multi-page site build, you'll want to create entries for each page script instead.
 const buildConfig = (options = {}) => {
-  _.defaults(options, {optimize: true})
-  let {name} = options
+  let {name, mode} = options
+  let devMode = mode !== "production"
+  let optimization = {}
+  if (!devMode)
+    _.assignIn(optimization, {
+      minimize: !devMode
+      ,minimizer: [new TerserPlugin(), new OptimizeCSSAssetsPlugin({})]
+    })
+
   var config = {
     entry: {}
+    ,optimization
     ,output: {
-      path: BUILD_DIR,
-      filename: "index.bundle.js" //this [name] is the entry name. i.e. 'main'
+      path: BUILD_DIR
+      ,publicPath: "/"
+      ,filename: "index.bundle.js"
+      ,chunkFilename: '[id].[hash].js'
     }
+    ,mode
     ,plugins: [
       new webpack.IgnorePlugin({
         resourceRegExp: /^\.\/locale$/,
@@ -25,7 +38,7 @@ const buildConfig = (options = {}) => {
       })
       ,new BundleAnalyzerPlugin({
         analyzerMode: "static"
-        ,openAnalyzer: true
+        ,openAnalyzer: false
       })
     ]
     ,module: {
@@ -36,15 +49,7 @@ const buildConfig = (options = {}) => {
           use: {
             loader: 'babel-loader', //webpack loader to setup babel
             options: {
-              presets: [['@babel/preset-env', {
-                "useBuiltIns": "entry"
-                ,"corejs": 3
-              }], '@babel/preset-react'] //enables ES2015 and react/JSX
-              ,plugins: [
-                '@babel/plugin-proposal-object-rest-spread'
-                ,'@babel/plugin-transform-runtime'
-              ]
-              ,babelrc: false //disables .babelrc config; using this one only
+              babelrc: true //disables .babelrc config; using this one only
             }
           }
         }
@@ -59,6 +64,7 @@ const buildConfig = (options = {}) => {
 
 //if you have multiple apps (like say: public site vs private app),
 //  you can call buildConfig multiple times with different subfolders
-module.exports = [
-  buildConfig({name: "index"})
-]
+module.exports = (env, argv) => {
+  let mode = argv.mode || "development"
+  return buildConfig({name: "index", mode}) //could be array
+}

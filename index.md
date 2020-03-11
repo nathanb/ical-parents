@@ -1,2 +1,1 @@
-## [2019 (Fall) Soccer Stars](./soccer-stars)
-## [2019 (Fall) Royal Angels](./royal-angels)
+## [2020 (Spring) Wild Animals](./wild-animals)
